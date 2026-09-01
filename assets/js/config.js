@@ -5,14 +5,15 @@
  */
 window.SITE_CONFIG = {
   // Nombre del negocio
-  nombreNegocio: "Draw Studio",
+  nombreNegocio: "Black Space",
 
   // Número de WhatsApp SIN espacios, SIN "+", con código de país.
-  // Ejemplo Ecuador: 5939XXXXXXXX
-  whatsappNumero: "593999999999",
+  // ⚠️ VALOR FICTICIO — reemplázalo por tu número real antes de publicar.
+  whatsappNumero: "593912345678",
 
   // Correo de contacto (se muestra en el sitio)
-  correoContacto: "contacto@tunegocio.com",
+  // ⚠️ VALOR FICTICIO — reemplázalo por tu correo real antes de publicar.
+  correoContacto: "contacto@blackspace.com",
 
   // Ciudad / dirección referencial
   ubicacion: "Quito, Ecuador",
