@@ -24,6 +24,33 @@
     document.body.appendChild(a);
   }
 
+  // Contadores animados (barra de estadísticas), se disparan al entrar en pantalla
+  var counters = document.querySelectorAll("[data-counter]");
+  if (counters.length && "IntersectionObserver" in window) {
+    var animateCounter = function (el, target, duration) {
+      var start = null;
+      var step = function (ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.floor(progress * target).toLocaleString("es-ES");
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target, parseInt(entry.target.getAttribute("data-counter"), 10), 1400);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    counters.forEach(function (el) { obs.observe(el); });
+  }
+
   // Rellenar nombre del negocio / correo donde exista el marcador de datos
   document.querySelectorAll("[data-brand]").forEach(function (el) {
     el.textContent = cfg.nombreNegocio || "";
