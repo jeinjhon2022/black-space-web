@@ -5,20 +5,20 @@
    ========================================================= */
 
 :root {
-  --bg: #14161b;
-  --bg-alt: #1a1d23;
-  --card: #1c1f26;
-  --card-hover: #21252d;
-  --text: #f2f2f0;
-  --text-muted: #9195a0;
+  --bg: #0c1c30;
+  --bg-alt: #112643;
+  --card: #14294a;
+  --card-hover: #1a3257;
+  --text: #f2f6fa;
+  --text-muted: #8ea2c0;
   --accent: #e63946;
   --accent-hover: #ff4d5e;
-  --accent-soft: rgba(230, 57, 70, 0.14);
-  --blue: #5eb1e6;
-  --blue-soft: rgba(94, 177, 230, 0.12);
-  --border: #2c2f37;
-  --border-hover: #454955;
-  --grid-line: rgba(242, 242, 240, 0.045);
+  --accent-soft: rgba(230, 57, 70, 0.16);
+  --blue: #8fd0ff;
+  --blue-soft: rgba(143, 208, 255, 0.14);
+  --border: #234066;
+  --border-hover: #3a5c8a;
+  --grid-line: rgba(242, 246, 250, 0.06);
   --radius: 3px;
   --max-width: 1200px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
