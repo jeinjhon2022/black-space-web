@@ -1,20 +1,25 @@
 /* =========================================================
-   Draw Studio — hoja de estilos base
-   Sin dependencias externas (fuentes del sistema, cero costo)
+   Black Space — hoja de estilos base
+   Tipografía vía Google Fonts (gratis, único CDN externo)
    ========================================================= */
 
 :root {
   --bg: #16181d;
   --bg-alt: #1e2128;
   --card: #23262e;
+  --card-hover: #292d36;
   --text: #f2f2f0;
   --text-muted: #a7abb5;
   --accent: #e63946;
   --accent-hover: #ff4d5e;
+  --accent-soft: rgba(230, 57, 70, 0.14);
   --border: #33363f;
+  --border-hover: #4a4e59;
   --radius: 10px;
   --max-width: 1180px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Space Grotesk", var(--font);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * { box-sizing: border-box; }
@@ -27,6 +32,10 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+  font-family: var(--font-heading);
 }
 
 img { max-width: 100%; display: block; }
@@ -74,14 +83,31 @@ nav.main-nav ul {
 }
 
 nav.main-nav a {
+  position: relative;
   font-size: 0.95rem;
   color: var(--text-muted);
-  transition: color 0.15s ease;
+  transition: color 0.15s var(--ease);
+}
+
+nav.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--accent);
+  transition: right 0.2s var(--ease);
 }
 
 nav.main-nav a:hover,
 nav.main-nav a.active {
   color: var(--text);
+}
+
+nav.main-nav a:hover::after,
+nav.main-nav a.active::after {
+  right: 0;
 }
 
 .nav-toggle {
@@ -114,12 +140,40 @@ nav.main-nav a.active {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 64px 0 40px;
+  position: relative;
+  padding: 72px 0 40px;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  width: 720px;
+  height: 420px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, var(--accent-soft), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .hero img.hero-img {
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   margin: 0 auto 40px;
   max-height: 460px;
   object-fit: cover;
@@ -150,14 +204,20 @@ nav.main-nav a.active {
   font-size: 0.95rem;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: transform 0.15s var(--ease), background 0.15s var(--ease), border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
 
 .btn-primary {
   background: var(--accent);
   color: #fff;
 }
-.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.35);
+}
 
 .btn-outline {
   background: transparent;
@@ -187,6 +247,20 @@ section.alt { background: var(--bg-alt); }
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+.section-head h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 .section-head p { color: var(--text-muted); margin: 0; }
 
@@ -204,9 +278,18 @@ section.alt { background: var(--bg-alt); }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
 }
 
-.card img { aspect-ratio: 4/3; object-fit: cover; width: 100%; background: #000; }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  background: var(--card-hover);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card img { aspect-ratio: 4/3; object-fit: cover; width: 100%; background: #000; transition: transform 0.3s var(--ease); }
+.card:hover img { transform: scale(1.03); }
 
 .card-body { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 
