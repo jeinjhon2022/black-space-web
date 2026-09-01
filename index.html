@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draw Studio — Mesas de Dibujo y Estaciones de Trabajo</title>
+  <meta name="description" content="Mesas de dibujo y estaciones de trabajo para diseño y arquitectura. Catálogo, reservas online y blog." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span data-brand>Draw Studio</span></a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="reservas.html">Reservar online</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <img class="hero-img" src="assets/img/hero.jpg" alt="Estación de dibujo" onerror="this.src='https://placehold.co/1200x500/23262e/a7abb5?text=Draw+Studio'">
+      <h1>Mesas de Dibujo y Estaciones de Trabajo</h1>
+      <p class="subtitle">Equipamos tu espacio de diseño y arquitectura con mobiliario profesional. Compra, reserva una estación o escríbenos directo por WhatsApp.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="catalogo.html">Ver catálogo</a>
+        <a class="btn btn-outline" href="reservas.html">Reservar online</a>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>¿Por qué elegirnos?</h2>
+          <p>Calidad, ergonomía y atención personalizada en cada proyecto.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card-body">
+              <h3>Materiales profesionales</h3>
+              <p class="desc">Mesas y estaciones pensadas para uso intensivo en diseño, arquitectura e ilustración.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3>Reserva tu espacio</h3>
+              <p class="desc">Agenda una estación de trabajo online sin llamadas ni papeleo.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3>Atención directa</h3>
+              <p class="desc">Consulta precios y disponibilidad al instante por WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Últimas publicaciones</h2>
+          <p>Consejos y novedades sobre mesas de dibujo y estaciones de trabajo.</p>
+        </div>
+        <div class="grid" id="blog-list" data-limit="3"></div>
+        <div class="btn-row" style="margin-top:32px;">
+          <a class="btn btn-outline" href="blog.html">Ver todo el blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span data-brand>Draw Studio</span> · <span data-ubicacion>Ubicación</span> · <a data-email href="#">correo</a></p>
+      <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog.js"></script>
+</body>
+</html>

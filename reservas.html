@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservar online — Draw Studio</title>
+  <meta name="description" content="Reserva tu estación de trabajo online, gratis, sin llamadas." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span data-brand>Draw Studio</span></a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="reservas.html" class="active">Reservar online</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Reservar online</h2>
+          <p>Elige un horario disponible para tu estación de trabajo. Recibirás la confirmación por correo automáticamente.</p>
+        </div>
+
+        <div class="embed-wrap" id="calcom-wrap">
+          <!-- Se reemplaza por el iframe de Cal.com vía JS usando los datos de config.js -->
+        </div>
+
+        <p class="empty-state" id="calcom-fallback" style="display:none;">
+          El calendario de reservas aún no está configurado.
+          Si eres el dueño del sitio: crea una cuenta gratis en
+          <a href="https://cal.com" target="_blank" rel="noopener">cal.com</a>
+          y completa <code>calcomUsuario</code> / <code>calcomEvento</code> en <code>assets/js/config.js</code>.
+          Mientras tanto, puedes reservar escribiendo por WhatsApp.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span data-brand>Draw Studio</span> · <span data-ubicacion>Ubicación</span> · <a data-email href="#">correo</a></p>
+      <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var cfg = window.SITE_CONFIG || {};
+      var wrap = document.getElementById("calcom-wrap");
+      var fallback = document.getElementById("calcom-fallback");
+      if (cfg.calcomUsuario && cfg.calcomUsuario !== "tu-usuario-calcom") {
+        var iframe = document.createElement("iframe");
+        iframe.src = "https://cal.com/" + cfg.calcomUsuario + "/" + (cfg.calcomEvento || "");
+        iframe.title = "Calendario de reservas";
+        wrap.appendChild(iframe);
+      } else {
+        wrap.style.display = "none";
+        fallback.style.display = "block";
+      }
+    })();
+  </script>
+</body>
+</html>

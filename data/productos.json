@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mesa-dibujo-a1",
+    "nombre": "Mesa de Dibujo Profesional A1",
+    "descripcion": "Mesa inclinable de gran formato, ideal para arquitectura y diseño industrial.",
+    "precio": "$120",
+    "img": "assets/img/producto-1.jpg"
+  },
+  {
+    "id": "estacion-cad",
+    "nombre": "Estación de Diseño CAD",
+    "descripcion": "Estación completa con monitor, superficie de dibujo y espacio de almacenamiento.",
+    "precio": "$260",
+    "img": "assets/img/producto-2.jpg"
+  },
+  {
+    "id": "mesa-portatil",
+    "nombre": "Mesa de Dibujo Portátil",
+    "descripcion": "Plegable y ligera, perfecta para estudiantes y trabajo desde casa.",
+    "precio": "$65",
+    "img": "assets/img/producto-3.jpg"
+  },
+  {
+    "id": "banco-taburete",
+    "nombre": "Banco Taburete Regulable",
+    "descripcion": "Altura ajustable, diseñado para largas sesiones de trabajo.",
+    "precio": "$40",
+    "img": "assets/img/producto-4.jpg"
+  }
+]

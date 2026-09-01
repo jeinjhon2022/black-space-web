@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "como-elegir-tu-mesa-de-dibujo",
+    "titulo": "Cómo elegir tu mesa de dibujo ideal",
+    "fecha": "2026-08-15",
+    "resumen": "Consejos clave para elegir la mesa de dibujo según tu espacio, presupuesto y tipo de proyecto.",
+    "img": "assets/img/blog-1.jpg",
+    "contenidoHtml": "<p>Elegir la mesa de dibujo correcta depende de tres factores: el espacio disponible, el tipo de proyectos que realizas y tu presupuesto.</p><p>Si trabajas con formatos grandes (A1 o A0), una mesa inclinable de gran superficie te dará mejores resultados. Si tu espacio es reducido o te mueves seguido, una opción portátil y plegable es ideal.</p><p>Recuerda también considerar la ergonomía: una mesa con altura regulable cuida tu espalda durante largas jornadas de trabajo.</p>"
+  },
+  {
+    "slug": "estaciones-de-trabajo-para-estudiantes",
+    "titulo": "5 razones para tener una estación de trabajo dedicada",
+    "fecha": "2026-08-22",
+    "resumen": "Una estación de trabajo bien pensada mejora tu concentración y la calidad de tus proyectos.",
+    "img": "assets/img/blog-2.jpg",
+    "contenidoHtml": "<p>Tener un espacio dedicado para dibujar o diseñar marca la diferencia en la productividad y en la calidad final de tus proyectos.</p><ol><li>Mejora tu concentración.</li><li>Organiza tus materiales.</li><li>Cuida tu postura.</li><li>Facilita el trabajo en equipo.</li><li>Da una imagen más profesional si recibes clientes.</li></ol>"
+  }
+]

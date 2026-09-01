@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto — Draw Studio</title>
+  <meta name="description" content="Escríbenos por WhatsApp, correo o el formulario de contacto." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span data-brand>Draw Studio</span></a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="reservas.html">Reservar online</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Contacto</h2>
+          <p>Elige el canal que prefieras. Te respondemos lo antes posible.</p>
+        </div>
+
+        <div class="contact-info grid">
+          <div class="item">
+            <strong>WhatsApp</strong>
+            <a id="wa-link" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+          <div class="item">
+            <strong>Correo</strong>
+            <a data-email href="#">correo</a>
+          </div>
+          <div class="item">
+            <strong>Ubicación</strong>
+            <span data-ubicacion>Ubicación</span>
+          </div>
+        </div>
+
+        <form class="card-form" id="contact-form">
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          <p class="form-msg" id="form-msg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span data-brand>Draw Studio</span> · <span data-ubicacion>Ubicación</span> · <a data-email href="#">correo</a></p>
+      <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contacto.js"></script>
+  <script>
+    (function () {
+      var cfg = window.SITE_CONFIG || {};
+      var wa = document.getElementById("wa-link");
+      if (wa && cfg.whatsappNumero) {
+        wa.href = "https://wa.me/" + cfg.whatsappNumero + "?text=" + encodeURIComponent("Hola, tengo una consulta.");
+      }
+    })();
+  </script>
+</body>
+</html>
