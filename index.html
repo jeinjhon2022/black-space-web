@@ -8,7 +8,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181d'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-weight='700' font-size='26' fill='%23e63946' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -30,14 +30,28 @@
   </header>
 
   <main>
-    <section class="hero container">
-      <img class="hero-img" src="assets/img/hero.jpg" alt="Estación de dibujo" onerror="this.src='https://placehold.co/1200x500/23262e/a7abb5?text=Black+Space'">
-      <span class="eyebrow">Diseño · Arquitectura · Ilustración</span>
-      <h1>Mesas de Dibujo y Estaciones de Trabajo</h1>
-      <p class="subtitle">Equipamos tu espacio de diseño y arquitectura con mobiliario profesional. Compra, reserva una estación o escríbenos directo por WhatsApp.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="catalogo.html">Ver catálogo</a>
-        <a class="btn btn-outline" href="reservas.html">Reservar online</a>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">Diseño · Arquitectura · Ilustración</span>
+          <h1>Mesas de Dibujo y Estaciones de Trabajo</h1>
+          <div class="dimension-line" aria-hidden="true">
+            <span class="tick"></span>
+            <span class="line"></span>
+            <span class="label mono">Mesa A1 · Estación · 2026</span>
+            <span class="line"></span>
+            <span class="tick"></span>
+          </div>
+          <p class="subtitle">Equipamos tu espacio de diseño y arquitectura con mobiliario profesional. Compra, reserva una estación o escríbenos directo por WhatsApp.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="catalogo.html">Ver catálogo</a>
+            <a class="btn btn-outline" href="reservas.html">Reservar online</a>
+          </div>
+        </div>
+        <div class="hero-visual crop-marks">
+          <img class="hero-img" src="assets/img/hero.jpg" alt="Estación de dibujo" onerror="this.src='https://placehold.co/900x700/1c1f26/9195a0?text=Black+Space'">
+          <span class="hero-tag">FIG. 01</span>
+        </div>
       </div>
     </section>
 
